@@ -1,7 +1,7 @@
 import 'babel-polyfill';
-// import './utils/iview-shim';
-// import promise from 'es6-promise';
-// promise.polyfill();
+import './utils/iview-shim';
+import promise from 'es6-promise';
+promise.polyfill();
 
 import GsTable from './components/gs-table';
 import GsMenu from './components/gs-menu';

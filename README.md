@@ -20,5 +20,3 @@ npm run build --report
 # update iview style from github and cover its variables by our custom.less
 npm run update:style
 ```
-
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).

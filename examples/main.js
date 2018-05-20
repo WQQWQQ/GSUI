@@ -1,7 +1,7 @@
 import '../src/styles/index.less';
-import '../src/utils/iview-shim';
+/*import '../src/utils/iview-shim';
 import promise from 'es6-promise';
-promise.polyfill();
+promise.polyfill();*/
 import gsui from '../src/index';
 Vue.use(gsui);
 

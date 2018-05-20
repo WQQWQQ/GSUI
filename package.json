@@ -10,7 +10,7 @@
     "dist:dev": "webpack --config build/webpack.dist.dev.config.js",
     "dist:prod": "webpack --config build/webpack.dist.prod.config.js",
     "start": "npm run dev",
-    "build": "npm run dist:style && npm run dist:prod && gulp concatJs",
+    "build": "npm run dist:style && npm run dist:prod",
     "update:style": "iview-theme init gsui-theme && gulp concatLess && cd gsui-theme && iview-theme build -o dist/ && gulp rename"
   },
   "dependencies": {
