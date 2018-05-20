@@ -1,0 +1,15 @@
+@select-prefix-cls: ~"@{css-prefix}select";
+
+.@{select-prefix-cls} {
+  &-container {
+    .@{select-prefix-cls}-label {
+      font-size: 14px;
+      color: @text-color;
+      margin-right: 2px;
+      &:extend(.inline-block);
+      &+.@{select-prefix-cls} {
+        width: 200px;
+      }
+    }
+  }
+}

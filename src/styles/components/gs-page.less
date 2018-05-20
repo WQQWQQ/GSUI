@@ -1,0 +1,103 @@
+@pages-prefix-cls: ~"@{css-prefix}page";
+@pages-height: 24px;
+.@{pages-prefix-cls} {
+    &-container {
+        padding: 10px;
+        line-height: @pages-height;
+        font-size: 12px;
+        color: @text-color;
+        zoom:1;
+        &::after{
+            content: '';
+            height: 0;
+            line-height: 0;
+            display: block;
+            visibility: hidden;
+            clear: both;
+        }
+        .@{pages-prefix-cls}-left {
+            float: left;
+            position: relative;
+            &-total {
+                color: @primary-color;
+            }
+            &-select {
+                width: 50px;
+                display: inline-block;
+                border: 1px solid #dae6f9;
+                line-height: @pages-height - 2px;
+                padding: 0 30px 0 5px;
+                background: #fff;
+                margin: 0 5px;
+                position: relative;
+                .@{css-prefix}icon {
+                    position: absolute;
+                    right: 5px;
+                    top: 50%;
+                    margin-top: -6px;
+                }
+            }
+            &-options{
+                width: 50px;
+                position: absolute;
+                right: 41px;
+                background: #fff;
+                border: 1px solid #dae6f9;
+                box-shadow: 0 1px 6px rgba(0,0,0,.2);
+                cursor: pointer;
+            }
+            &-option{
+                padding: 0 10px;
+                &:hover{
+                    background: @pages-item-bg;
+                    color:@primary-color;
+                }
+                &-active{
+                    background: @primary-color;
+                    color:#fff;
+                }
+            }
+        }
+        .@{pages-prefix-cls}-right {
+            float: right;
+            &-pager{
+                float: left;
+            }
+            &-jump{
+                float: left;
+                margin-left: 7px;
+            }
+            &-input{
+                border: 1px solid #dae6f9;
+                height: @pages-height;
+                line-height: @pages-height - 2px;
+                text-align: center;
+                padding: 0 5px;
+                width: 40px;
+                margin: 0 5px;
+            }
+            &-btn{
+                margin-left: 20px;
+                float: left;
+            }
+            .@{pages-prefix-cls}-item{
+                float: left;
+                padding: 0 10px;
+                text-align: center;
+                color:@primary-color;
+                height: @pages-height;
+                width: auto;
+                border: 1px solid #dae6f9;
+                background:@pages-item-bg;
+                &-active,&:hover{
+                    color:#fff;
+                    background: @primary-color;
+                    border-color: @primary-color;
+                }
+                &.@{pages-prefix-cls}-num{
+                    padding: 0 4px;
+                }
+            }
+        }
+    }
+}

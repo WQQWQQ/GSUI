@@ -1,0 +1,35 @@
+@checkbox-prefix-cls: ~"@{css-prefix}checkbox";
+
+@checkbox-height: 15px;
+.@{checkbox-prefix-cls} {
+    &-container {
+        .@{checkbox-prefix-cls}-label {
+            font-size: 14px;
+            color: @text-color;
+            margin-right: 2px;
+            line-height: @checkbox-height;
+            &:extend(.inline-block);
+        }
+        .@{checkbox-prefix-cls}-wrapper{
+            vertical-align: middle;
+            margin-right: 20px;
+        }
+        .@{checkbox-prefix-cls} {
+            &-inner {
+                width: @checkbox-height;
+                height: @checkbox-height;
+            }
+        }
+        .@{checkbox-prefix-cls}-icon {
+            &:extend(.inline-block);
+            width: @checkbox-height;
+            height: @checkbox-height;
+            margin-right: 5px;
+            line-height: @checkbox-height;
+        }
+        .@{checkbox-prefix-cls}-item-label {
+            &:extend(.inline-block);
+            line-height: @checkbox-height;
+        }
+    }
+}

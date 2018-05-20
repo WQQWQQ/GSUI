@@ -1,0 +1,68 @@
+.vertical-gradient(@startColor;
+
+@endColor) {
+    background: average(@startColor, @endColor);
+    background: -ms-linear-gradient(top, @startColor 0%, @endColor 100%);
+    background: -webkit-linear-gradient(top, @startColor, @endColor);
+    background: -moz-linear-gradient(top, @startColor, @endColor);
+    background: -o-linear-gradient(top, @startColor, @endColor);
+    background-image: linear-gradient(0deg, @endColor 0%, @startColor 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=@startColor, endcolorstr=@endColor, gradientType='0');
+    -ms-filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=@startColor, endcolorstr=@endColor, gradientType='0');
+    background-blend-mode: normal, normal;
+}
+
+.horizontal-gradient(@startColor;
+
+@endColor) {
+    background: average(@startColor, @endColor);
+    background: -ms-linear-gradient(left, @startColor 0%, @endColor 100%);
+    background: -webkit-linear-gradient(left, @startColor, @endColor);
+    background: -moz-linear-gradient(left, @startColor, @endColor);
+    background: -o-linear-gradient(left, @startColor, @endColor);
+    background-image: linear-gradient(-90deg, @endColor 0%, @startColor 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=@startColor, endcolorstr=@endColor, gradientType='1');
+    -ms-filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=@startColor, endcolorstr=@endColor, gradientType='1');
+    background-blend-mode: normal, normal;
+}
+
+.button-color(@color;
+@background;
+
+@border) {
+    color: @color;
+    border-color: @border;
+    background: @background;
+
+    > a:only-child {
+        color: currentColor;
+
+        &:after {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            content: '';
+            background: transparent;
+        }
+
+    }
+
+}
+
+.placeholder(@color:@input-placeholder-color) {
+    &::-moz-placeholder {
+        opacity: 1;
+        color: @color;
+    }
+
+    &:-ms-input-placeholder {
+        color: @color;
+    }
+
+    &::-webkit-input-placeholder {
+        color: @color;
+    }
+
+}

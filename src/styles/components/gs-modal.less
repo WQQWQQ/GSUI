@@ -1,0 +1,90 @@
+@modal-prefix-cls: ~"@{css-prefix}modal";
+
+.@{modal-prefix-cls}-mask {
+  background-color: rgba(0,0,0,.4);
+}
+.@{modal-prefix-cls} {
+    .@{modal-prefix-cls}-content {
+      position: relative;
+      border-radius: 4px;
+      a {
+        width: 36px;
+        height: 35px;
+        line-height: 35px;
+        text-align: center;
+        top: 0;
+        right: 0;
+        border-top-right-radius: 4px;
+        background-image: url('../../../assets/components/gs-modal/close.png');
+        i {
+          line-height: 35px;
+          color: #fff;
+          &.ivu-icon-ios-close-empty::before {
+            content: '';
+          }
+        }
+        &:hover {
+          background-image: url('../../../assets/components/gs-modal/close-hover.png');
+          i {
+            color: #fff;
+          }
+        }
+        &:active {
+          background-image: url('../../../assets/components/gs-modal/close-hover.png');
+        }
+      }
+      .@{modal-prefix-cls}-header {
+        padding: 2px 0 2px 10px;
+        background-color: #0a88f2;
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+        font-size: 0;
+        border-bottom: none;
+        p {
+          line-height: 31px;
+          height: 31px;
+          span {
+            display: inline-block;
+            line-height: 31px;
+            color: #fff;
+          }
+        }
+      }
+      .@{modal-prefix-cls}-body {
+        .@{modal-prefix-cls}-tip {
+          height: 63px;
+          text-align: center;
+          img {
+            display: inline-block;
+            vertical-align: middle;
+            width: 32px;
+            height: 32px;
+          }
+          p {
+            display: inline-block;
+            vertical-align: middle;
+            line-height: 63px;
+            color: #333;
+          }
+        }
+      }
+      .@{modal-prefix-cls}-footer {
+        height: 40px;
+        padding: 5px 0;
+        .@{modal-prefix-cls}-btn {
+          width: 80%;
+          height: 30px;
+          margin: 0 auto;
+          text-align: center;
+          font-size: 0;
+          button {
+            margin-right: 10px;
+            &:last-child {
+              margin-right: 0;
+              margin-left: 0;
+            }
+          }
+        }
+      }
+    }
+}

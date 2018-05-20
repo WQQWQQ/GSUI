@@ -1,0 +1,106 @@
+@tabs-prefix-cls: ~"@{css-prefix}tabs";
+@tabs-normal-height: 35px;
+@tabs-closable-height: 32px;
+.@{tabs-prefix-cls} {
+    &-container-normal {
+        position: relative;
+        width: 100%;
+        background: #f7faff;
+        .vertical-gradient(#ffffff, #eff6ff);
+        border-bottom: 1px solid @border-color-base;
+        height: @tabs-normal-height;
+        .@{tabs-prefix-cls}-list {
+            overflow: hidden;
+            li {
+                position: relative;
+                cursor: pointer;
+                float: left;
+                text-align: center;
+                padding: 0 20px;
+                line-height: @tabs-normal-height;
+                color: @title-color;
+                font-size: 14px;
+                box-sizing: border-box;
+                &.active {
+                    font-weight: bold;
+                    color: #0394f9;
+                    background: #fff;
+                    border-right: 1px solid @border-color-base;
+                    border-left: 1px solid @border-color-base;
+                }
+                &:hover {
+                    font-weight: bold;
+                    color: #0394f9;
+                }
+                .triangle {
+                    position: absolute;
+                    bottom: -2px;
+                    left: 0;
+                    width: 100%;
+                    height: 10px;
+                    background-color: #eee;
+                    background: url("../../../assets/components/gs-tabs/down-triangle.png") center no-repeat;
+                }
+            }
+        }
+    }
+    &-container-closable {
+        overflow: hidden;
+        position: relative;
+        background: #f7faff;
+        border-bottom: 1px solid @border-color-base;
+        height: @tabs-closable-height;
+        &>.@{css-prefix}icon-chevron-left,&>.@{css-prefix}icon-chevron-right{
+            background: #f7faff;
+            position: absolute;
+            z-index: 1;
+            height: @tabs-closable-height;
+            line-height: @tabs-closable-height;
+            cursor: pointer;
+        }
+        &>.@{css-prefix}icon-chevron-left{
+            left:0;
+        }
+        &>.@{css-prefix}icon-chevron-right{
+            right: 0;
+        }
+        .@{tabs-prefix-cls}-list {
+            transition:all ease .3s;
+            position: relative;
+            float: left;
+            overflow: hidden;
+            white-space: nowrap;
+            padding: 0 3px;
+            li {
+                height: @tabs-closable-height;
+                position: relative;
+                display: inline-block;
+                vertical-align: middle;
+                text-align: center;
+                padding: 0 14px;
+                margin: 0 3px;
+                font-size: 14px;
+                line-height: @tabs-closable-height;
+                &.active,
+                &:hover {
+                    color: #0394f9;
+                    font-weight: bold;
+                    .@{css-prefix}icon-close {
+                        color: #0394f9;
+                    }
+                }
+                &.active {
+                    border-bottom: 3px solid #109af9;
+                }
+                .@{css-prefix}icon-close {
+                    cursor: pointer;
+                    color: #a5b3c7;
+                    font-size: 10px;
+                    -webkit-transform: scale(0.8);
+                    -webkit-text-size-adjust: none;
+                    margin-left: 3px;
+                }
+            }
+        }
+    }
+}

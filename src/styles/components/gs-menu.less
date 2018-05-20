@@ -1,0 +1,128 @@
+@menu-prefix-cls: ~"@{css-prefix}menu";
+@menu-height:50px;
+
+.@{menu-prefix-cls}{
+    &-container{
+        .@{menu-prefix-cls}{
+            display: block;
+            width: 100%;
+            height: @menu-height;
+            line-height: 1;
+            overflow: visible;
+            .horizontal-gradient(#009bfd,#1574e7);
+            &-logo{
+                float: left;
+                height: 100%;
+                font-size: 22px;
+                color:#fff;
+                padding-right: 70px;
+                img{
+                    margin:6px 8px 6px 20px;
+                    width:38px;
+                    height: 38px;
+                }
+            }
+            &-list{
+                overflow: hidden;
+                float: left;
+                .@{menu-prefix-cls}-item{
+                    line-height: @menu-height;
+                    padding: 0 15px;
+                    font-size: 16px;
+                    color:#fff;
+                    &-selected,
+                    &-active,
+                    &:hover {
+                        background: url('../../../assets/components/gs-menu/nav-highlight.png');
+                    }
+                    img{
+                        width: 24px;
+                        height: 24px;
+                        margin:-3px 5px 0 0;
+                    }
+                }
+            }
+            &-toggle{
+                cursor: pointer;
+                float: right;
+                height: @menu-height;
+                width:@menu-height;
+                background: url('../../../assets/components/gs-menu/toggle.png') center no-repeat;
+                &:hover{
+                    background: url('../../../assets/components/gs-menu/toggle-active.png') center no-repeat;
+                }
+            }
+            &-admin{
+                padding: 0 8px;
+                float: right;
+                height: 100%;
+                font-size: 15px;
+                color:#d8e9ff;
+                background-color: rgba(255, 255, 255, 0.2);
+                .@{menu-prefix-cls}-avatar{
+                    width: 26px;
+                    height: 26px;
+                    margin:-3px 2px 0 0;
+                }
+                .@{menu-prefix-cls}-username{
+                    line-height: 50px;
+                }
+                .ivu-icon{
+                    border-radius: @border-radius-small;
+                    padding: 1px 3px;
+                    cursor: pointer;
+                    margin-left: 10px;
+                    font-size: 12px;
+                    &.active,&:hover{
+                        background: #3682d5;
+                        box-shadow:2px 2px 3px #3472d5 inset;
+                    }
+                }
+                .@{menu-prefix-cls}-admin-submenu{
+                    background: #fff;
+                    position: absolute;
+                    right:0;
+                    top:40px;
+                    width: 138px;
+                    border: 1px solid #d6d6d6;
+                    box-shadow: 0 2px 3px rgba(0,0,0,.5);
+                    border-radius: @border-radius-base;
+                    &::after{
+                        width: 0;
+                        height: 0;
+                        content: '';
+                        display: block;
+                        border-width: 10px;
+                        border-style: solid;
+                        border-color: transparent transparent #fff transparent;
+                        position: absolute;
+                        right: 3px;
+                        top:-18px;
+                        pointer-events: none;
+                    }
+                    li{
+                        cursor: pointer;
+                        color:#666;
+                        font-size: 12px;
+                        height: 30px;
+                        line-height: 30px;
+                        padding: 0 15px;
+                        &:hover{
+                            border-width: 1px 0;
+                            border-style: solid;
+                            border-color: #e4e6eb;
+                            background: #f5f8fd;
+                            color: #3a75d9;
+                            line-height: 28px;
+                        }
+                        img{
+                            width: 16px;
+                            height: 16px;
+                            margin: -3px 10px 0 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
